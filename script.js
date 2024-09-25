@@ -3,45 +3,86 @@ var binario = 0;
 var octal = 0;
 var hex = 0;
 
+function mostrarDiv(div) {
+    if (div.style.opacity == 1) {
+        div.style.opacity = 0;
+    } else {
+        div.style.opacity = 1;
+    }
+}
+
 // Função de lógica para ocultação e mostra das divs
 function mostrarDiv(div) {
-    if (div.style.display == 'block') {
-        div.style.display = 'none';
+    if (div.style.display == 'block' && div.style.opacity == 1) {
+        div.style.opacity = 0;
+        setTimeout(function() {
+            div.style.display = 'none';
+        }, 500);
     } else {
-        div.style.display = 'block';
+        setTimeout(function() {
+            div.style.display = 'block';
+        }, 700)
+        setTimeout(function() { 
+            div.style.opacity = 1;
+        }, 900);
+       
     }
 }
 
 // Funções que mostram a div ao clicar nos radios
 function mostrarDecimal() {
-    div_binario.style.display = 'none';
-    div_octal.style.display = 'none';
-    div_hexa.style.display = 'none';
+    div_binario.style.opacity = 0;
+    div_octal.style.opacity = 0;
+    div_hexa.style.opacity = 0;
+
+    setTimeout(function() {
+        div_binario.style.display = 'none';
+        div_octal.style.display = 'none';
+        div_hexa.style.display = 'none';
+    }, 600);
 
     mostrarDiv(div_decimal); 
     
 }
 
 function mostrarBinario() {
-    div_decimal.style.display = 'none';
-    div_octal.style.display = 'none';
-    div_hexa.style.display = 'none';
+    div_decimal.style.opacity = 0;
+    div_octal.style.opacity = 0;
+    div_hexa.style.opacity = 0;
+
+    setTimeout(function() {
+        div_decimal.style.display = 'none';
+        div_octal.style.display = 'none';
+        div_hexa.style.display = 'none';
+    }, 600);
 
    mostrarDiv(div_binario);
 }
 
 function mostrarOctal() {
-    div_binario.style.display = 'none';
-    div_decimal.style.display = 'none';
-    div_hexa.style.display = 'none';
+    div_binario.style.opacity = 0;
+    div_decimal.style.opacity = 0;
+    div_hexa.style.opacity = 0;
+
+    setTimeout(function() {
+        div_binario.style.display = 'none';
+        div_decimal.style.display = 'none';
+        div_hexa.style.display = 'none';
+    }, 600);
     
     mostrarDiv(div_octal);
 }
 
 function mostrarHexadecimal() {
-    div_binario.style.display = 'none';
-    div_octal.style.display = 'none';
-    div_decimal.style.display = 'none';
+    div_binario.style.opacity = 0;
+    div_octal.style.opacity = 0;
+    div_decimal.style.opacity = 0;
+
+    setTimeout(function() {
+        div_binario.style.display = 'none';
+        div_octal.style.display = 'none';
+        div_decimal.style.display = 'none';
+    }, 600);
 
     mostrarDiv(div_hexa);
 }
