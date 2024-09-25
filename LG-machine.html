@@ -1,123 +1,214 @@
 <!DOCTYPE html>
 <!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
 <html lang="en">
-    <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Machine LG</title>
+    <title>Machine Guilherme Vieira</title>
 </head>
 
 <body>
-        <h1>LG Machine</h1>
-
-        <br><br>
-    <div> Selecione qual conversão deseja: <br>
-        <input onclick="mostrarDecimal()" type="radio" name="input_escolha"><b>Decimal</b>
-        <input onclick="mostrarBinario()" type="radio" name="input_escolha"><b>Binário</b>
-        <input onclick="mostrarOctal()" type="radio" name="input_escolha"><b>Octal</b>
-        <input onclick="mostrarHexadecimal()" type="radio" name="input_escolha"><b>Hexadecimal</b>
+    <div class="header"> 
+        <h1>Vieira's Machine</h1>
+        <h4>Selecione qual conversão deseja:</h4> 
+        
+        <label class="radio-btn">
+            <input onclick="mostrarDecimal()" type="radio" name="input_escolha">
+            <span>Decimal</span>
+        </label>
+        <label class="radio-btn">
+            <input onclick="mostrarBinario()" type="radio" name="input_escolha">
+            <span>Binário</span>
+        </label>
+        <label class="radio-btn">
+            <input onclick="mostrarOctal()" type="radio" name="input_escolha">
+            <span>Octal</span>
+        </label>
+        <label class="radio-btn">
+            <input onclick="mostrarHexadecimal()" type="radio" name="input_escolha">
+            <span>Hexadecimal</span>
+        </label>
     </div>
 
-    <div id="div_decimal">
-        <h3>Decimal</h3>
-        <input id="input_decimal" type="text" placeholder="Digite o valor em decimal">
-        <button onclick="converterDecimal()">Converter decimal</button>
-        <br><br><br>
+    <div class="container" id="div_decimal">
+        <div class="div_input">
+            <h3>Decimal</h3>
+            <input id="input_decimal" type="text" placeholder="Digite o valor em decimal">
+            <button onclick="converterDecimal()">Converter decimal</button>
+        </div>
+
         <div class="div_linha">
             <div class="div_elemento">
-                <b>Octal:</b>
-                <br>
-                <div id="div_decOctal"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Octal:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_decOctal"> 0 </div>
+                    </div>
+                </div>
             </div>
+
             <div class="div_elemento">
-                <b>Hexadecimal:</b>
-                <br>
-                <div id="div_decHexa"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Hexadecimal:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_decHexa"> 0 </div>
+                    </div>
+                </div>
             </div>
+
             <div class="div_elemento">
-                <b>Binário:</b>
-                <br>
-                <div id="div_decBin"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Binário:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_decBin"> 0 </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="div_binario">
-        <h3>Binário</h3>
-        <input id="input_binario" type="text" placeholder="Digite o valor em binário">
-        <button onclick="converterBinario()">Converter binário</button>
-        <br><br><br>
+    <div class="container" id="div_binario">
+        <div class="div_input">
+            <h3>Binário</h3>
+            <input id="input_binario" type="text" placeholder="Digite o valor em binário">
+            <button onclick="converterBinario()">Converter binário</button>
+        </div>
         <div class="div_linha">
             <div class="div_elemento">
-                <b>Octal:</b>
-                <br>
-                <div id="div_binOctal"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Octal:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_binOctal"> 0 </div>
+                    </div>
+                </div>
             </div>
+
             <div class="div_elemento">
-                <b>Hexadecimal:</b>
-                <br>
-                <div id="div_binHexa"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Hexadecimal:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_binHexa"> 0 </div>
+                    </div>
+                </div>
             </div>
+
             <div class="div_elemento">
-                <b>Decimal:</b>
-                <br>
-                <div id="div_binDec"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Decimal:</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_binDec"> 0 </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="div_octal">
-        <h3>Octal</h3>
-        <input id="input_octal" type="text" placeholder="Digite o valor em octal">
-        <button onclick="converterOctal()">Converter octal</button>
-        <br><br><br>
+    <div class="container" id="div_octal">
+        <div class="div_input">
+            <h3>Octal</h3>
+            <input id="input_octal" type="text" placeholder="Digite o valor em octal">
+            <button onclick="converterOctal()">Converter octal</button>
+        </div>
+
         <div class="div_linha">
             <div class="div_elemento">
-                <b>Binário</b>
-                <br>
-                <div id="div_octalBin"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Binário</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_octalBin"> 0 </div>
+                    </div>
+                </div>
             </div>
-                <div class="div_elemento">
-                <b>Decimal</b>
-                <br>
-                <div id="div_octalDec"> 0 </div>
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Decimal</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_octalDec"> 0 </div>
+                    </div>
+                </div>
             </div>
-                <div class="div_elemento">
-                <b>Hexadecimal</b>
-                <br>
-                <div id="div_octalHex"> 0 </div>
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Hexadecimal</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_octalHex"> 0 </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="div_hexa">
-        <h3>Hexadecimal</h3>
-        <input id="input_hex" type="text" placeholder="Digite o valor em hexadecimal">
-        <button onclick="converterHexa()">Converter hexadecimal</button>
-        <br><br><br>
+    <div class="container" id="div_hexa">
+        <div class="div_input">
+            <h3>Hexadecimal</h3>
+            <input id="input_hex" type="text" placeholder="Digite o valor em hexadecimal">
+            <button onclick="converterHexa()">Converter hexadecimal</button>
+        </div>
+
         <div class="div_linha">
             <div class="div_elemento">
-                <b>Octal</b>
-                <br>
-                <div id="div_hexOctal"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Octal</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_hexOctal"> 0 </div>
+                    </div>
+                </div>
             </div>
             <div class="div_elemento">
-                <b>Decimal</b>
-                <br>
-                <div id="div_hexDec"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Decimal</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_hexDec"> 0 </div>
+                    </div>
+                </div>
             </div>
             <div class="div_elemento">
-                <b>Binário</b>
-                <br>
-                <div id="div_hexBin"> 0 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <b>Binário</b>
+                    </div>
+                    <div class="card-body">
+                        <div id="div_hexBin"> 0 </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-        <br><br>        
+    <br><br>
 
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
