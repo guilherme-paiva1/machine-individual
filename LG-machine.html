@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Machine LG</title>
+</head>
+
+<body>
+        <h1>LG Machine</h1>
+
+        <br><br>
+    <div> Selecione qual conversão deseja: <br>
+        <input onclick="mostrarDecimal()" type="radio" name="input_escolha"><b>Decimal</b>
+        <input onclick="mostrarBinario()" type="radio" name="input_escolha"><b>Binário</b>
+        <input onclick="mostrarOctal()" type="radio" name="input_escolha"><b>Octal</b>
+        <input onclick="mostrarHexadecimal()" type="radio" name="input_escolha"><b>Hexadecimal</b>
+    </div>
+
+    <div id="div_decimal">
+        <h3>Decimal</h3>
+        <input id="input_decimal" type="text" placeholder="Digite o valor em decimal">
+        <button onclick="converterDecimal()">Converter decimal</button>
+        <br><br><br>
+        <div class="div_linha">
+            <div class="div_elemento">
+                <b>Octal:</b>
+                <br>
+                <div id="div_decOctal"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Hexadecimal:</b>
+                <br>
+                <div id="div_decHexa"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Binário:</b>
+                <br>
+                <div id="div_decBin"> 0 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_binario">
+        <h3>Binário</h3>
+        <input id="input_binario" type="text" placeholder="Digite o valor em binário">
+        <button onclick="converterBinario()">Converter binário</button>
+        <br><br><br>
+        <div class="div_linha">
+            <div class="div_elemento">
+                <b>Octal:</b>
+                <br>
+                <div id="div_binOctal"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Hexadecimal:</b>
+                <br>
+                <div id="div_binHexa"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Decimal:</b>
+                <br>
+                <div id="div_binDec"> 0 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_octal">
+        <h3>Octal</h3>
+        <input id="input_octal" type="text" placeholder="Digite o valor em octal">
+        <button onclick="converterOctal()">Converter octal</button>
+        <br><br><br>
+        <div class="div_linha">
+            <div class="div_elemento">
+                <b>Binário</b>
+                <br>
+                <div id="div_octalBin"> 0 </div>
+            </div>
+                <div class="div_elemento">
+                <b>Decimal</b>
+                <br>
+                <div id="div_octalDec"> 0 </div>
+            </div>
+                <div class="div_elemento">
+                <b>Hexadecimal</b>
+                <br>
+                <div id="div_octalHex"> 0 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_hexa">
+        <h3>Hexadecimal</h3>
+        <input id="input_hex" type="text" placeholder="Digite o valor em hexadecimal">
+        <button onclick="converterHexa()">Converter hexadecimal</button>
+        <br><br><br>
+        <div class="div_linha">
+            <div class="div_elemento">
+                <b>Octal</b>
+                <br>
+                <div id="div_hexOctal"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Decimal</b>
+                <br>
+                <div id="div_hexDec"> 0 </div>
+            </div>
+            <div class="div_elemento">
+                <b>Binário</b>
+                <br>
+                <div id="div_hexBin"> 0 </div>
+            </div>
+        </div>
+    </div>
+
+        <br><br>        
+
+<script src="script.js"></script>
+
+</body>
+</html>

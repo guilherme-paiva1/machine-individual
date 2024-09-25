@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: rgb(143, 169, 209);
+}
+
+.div_linha {
+    display: flex;
+    flex-direction: row;
+}
+
+.div_elemento {
+    margin: 0 auto;
+}
+
+#div_decimal {
+    display:none;
+}
+
+#div_binario {
+    display:none;
+}
+
+#div_octal {
+    display:none;
+}
+
+#div_hexa {
+    display:none;
+}
