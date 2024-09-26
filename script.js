@@ -13,7 +13,7 @@ function mostrarDiv(div) {
 
 // Função de lógica para ocultação e mostra das divs
 function mostrarDiv(div) {
-    if (div.style.display == 'block' && div.style.opacity == 1) {
+    if (div.style.display == 'block' || div.style.opacity == 1) {
         div.style.opacity = 0;
         setTimeout(function() {
             div.style.display = 'none';
@@ -29,6 +29,17 @@ function mostrarDiv(div) {
     }
 }
 
+function mostrarDivResultado(div) {
+    if (div.style.opacity == 1) {
+        div.style.opacity = 0;
+        setTimeout(function() { 
+            div.style.opacity = 1;
+        }, 700);
+    } else {
+        div.style.opacity = 1;
+    }
+}
+
 // Funções que mostram a div ao clicar nos radios
 function mostrarDecimal() {
     div_binario.style.opacity = 0;
@@ -41,8 +52,9 @@ function mostrarDecimal() {
         div_hexa.style.display = 'none';
     }, 600);
 
-    mostrarDiv(div_decimal); 
-    
+    if (div_decimal.style.opacity == 0) {
+        mostrarDiv(div_decimal); 
+    } 
 }
 
 function mostrarBinario() {
@@ -56,7 +68,10 @@ function mostrarBinario() {
         div_hexa.style.display = 'none';
     }, 600);
 
-   mostrarDiv(div_binario);
+    if (div_binario.style.opacity == 0) {
+        mostrarDiv(div_binario);
+    } 
+   
 }
 
 function mostrarOctal() {
@@ -70,7 +85,9 @@ function mostrarOctal() {
         div_hexa.style.display = 'none';
     }, 600);
     
-    mostrarDiv(div_octal);
+    if (div_octal.style.opacity == 0) {
+        mostrarDiv(div_octal);
+    } 
 }
 
 function mostrarHexadecimal() {
@@ -84,7 +101,9 @@ function mostrarHexadecimal() {
         div_decimal.style.display = 'none';
     }, 600);
 
-    mostrarDiv(div_hexa);
+    if (div_hexa.style.opacity == 0) {
+        mostrarDiv(div_hexa);
+    }
 }
 
 // Seção de funções para conversão decimal
@@ -93,6 +112,7 @@ function calcularDecBin() {
     let binaria = decimal.toString(2);
 
     document.getElementById("div_decBin").innerHTML = ` ${binaria}`;
+
 }
 
 function calcularDecHexa() {
@@ -110,9 +130,14 @@ function calcularDecOctal() {
 }
 
 function converterDecimal() {
+    mostrarDivResultado(div_decBin);
+    mostrarDivResultado(div_decHexa);
+    mostrarDivResultado(div_decOctal);
+
     calcularDecBin();
     calcularDecHexa();
     calcularDecOctal();
+
 }
 
 // Seção para conversão de binário
@@ -140,9 +165,14 @@ function calcularBinHexa() {
 }
 
 function converterBinario() {
+    mostrarDivResultado(div_binDec);
+    mostrarDivResultado(div_binOctal);
+    mostrarDivResultado(div_binHexa);
+
     calcularBinHexa();
     calcularBinDec();
     calcularBinOctal();
+
 }
 
 // Seção para conversão de octal
@@ -151,15 +181,11 @@ function calcularOctalBin() {
     var octalBin = parseInt(octal, 8);
     var binario = octalBin.toString(2); 
 
-    mostrarDiv(div_octalBin);
-
     document.getElementById("div_octalBin").innerHTML = ` ${binario}`;
 }
 function calcularOctalDec() {
     octal = Number(input_octal.value);
     var decimal = parseInt(octal, 8);
-
-    mostrarDiv(div_octalDec);
 
     document.getElementById("div_octalDec").innerHTML = ` ${decimal}`;
 }
@@ -168,15 +194,18 @@ function calcularOctalHex() {
     var octalHex = parseInt(octal, 8);
     var hexa = octalHex.toString(16); 
 
-    mostrarDiv(div_octalHex);
-
     document.getElementById("div_octalHex").innerHTML = ` ${hexa}`;
 }
 
 function converterOctal() {
+    mostrarDivResultado(div_octalHex);
+    mostrarDivResultado(div_octalDec);
+    mostrarDivResultado(div_octalBin);
+
     calcularOctalHex();
     calcularOctalDec();
     calcularOctalBin();
+
 }
 
 
@@ -203,6 +232,10 @@ function calcularHexBin() {
 }
 
 function converterHexa() {
+    mostrarDivResultado(div_hexBin);
+    mostrarDivResultado(div_hexDec);
+    mostrarDivResultado(div_hexOctal);
+
     calcularHexOctal();
     calcularHexDec();
     calcularHexBin();
