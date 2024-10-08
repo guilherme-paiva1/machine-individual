@@ -76,6 +76,12 @@ body {
     transition: opacity 1s;
 }
 
+#div_ascii {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .div_resultado {
     opacity: 0;
     transition: opacity 1s;

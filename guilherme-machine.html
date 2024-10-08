@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
 <html lang="en">
 
 <head>
@@ -32,6 +31,10 @@
         <label class="radio-btn">
             <input onclick="mostrarHexadecimal()" type="radio" name="input_escolha">
             <span>Hexadecimal</span>
+        </label>
+        <label class="radio-btn">
+            <input onclick="mostrarASCII()" type="radio" name="input_escolha">
+            <span>Machine ASCII</span>
         </label>
     </div>
 
@@ -196,6 +199,57 @@
                     </div>
                     <div class="card-body">
                         <div class="div_resultado" id="div_hexBin"> 0 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="div_ascii">
+        <div class="div_input">
+            <h3>ASCII</h3>
+            <input id="input_ascii" type="text" placeholder="Digite um caracter">
+            <button onclick="converterCaracter()">Converter texto</button>
+        </div>
+
+        <div class="div_linha">
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Decimal</b>
+                    </div>
+                    <div class="card-body">
+                        <div class="div_resultado" id="div_asciiDec"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Binário</b>
+                    </div>
+                    <div class="card-body">
+                        <div class="div_resultado" id="div_asciiBin"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Octal</b>
+                    </div>
+                    <div class="card-body">
+                        <div class="div_resultado" id="div_asciiOctal"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="div_elemento">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Hexa</b>
+                    </div>
+                    <div class="card-body">
+                        <div class="div_resultado" id="div_asciiHexa"></div>
                     </div>
                 </div>
             </div>
