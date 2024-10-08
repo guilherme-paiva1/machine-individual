@@ -3,14 +3,6 @@ var binario = 0;
 var octal = 0;
 var hex = 0;
 
-function mostrarDiv(div) {
-    if (div.style.opacity == 1) {
-        div.style.opacity = 0;
-    } else {
-        div.style.opacity = 1;
-    }
-}
-
 // Função de lógica para ocultação e mostra das divs
 function mostrarDiv(div) {
     if (div.style.display == 'block' || div.style.opacity == 1) {
